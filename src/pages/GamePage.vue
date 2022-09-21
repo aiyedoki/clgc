@@ -1,8 +1,5 @@
 <template>
   <div id="gamePage">
-    <!-- BGM -->
-    <audio id="audio" src="../assets/disco.mp3"></audio>
-
     <a-row align="space-between">
       <a-button style="margin-bottom: 8px" @click="doBack"> 返回</a-button>
       <a-button>块数：{{ clearBlockNum }} / {{ totalBlockNum }}</a-button>
@@ -74,7 +71,7 @@
 
 <script setup lang="ts">
 import useGame from '../core/game'
-import { onMounted, ref } from 'vue'
+import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import MyAd from '../components/MyAd.vue'
 
@@ -88,8 +85,6 @@ const { gameStatus, levelBlocksVal, randomBlocksVal, slotAreaVal, widthUnit, hei
 const doBack = () => {
   router.back()
 }
-
-const audio = ref(null)
 
 onMounted(() => {
   doStart()
