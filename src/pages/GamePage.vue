@@ -125,6 +125,7 @@ onMounted(() => {
   line-height: 42px;
   border: 1px solid #eee;
   background: white;
+  cursor:default;
   text-align: center;
   vertical-align: top;
   display: inline-block;
